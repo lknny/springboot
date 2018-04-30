@@ -1,20 +1,22 @@
-package springboot;
+package springboot.controller;
 
 
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * Created by ${10190990} on 2017/11/13.
+ * Created by ${lknny@163.com} on 2017/11/13.
  */
 @RestController
-@RequestMapping(value="lk")
+@ComponentScan(basePackages={"springboot"})
 @EnableAutoConfiguration
 public class Controller {
 
-	@RequestMapping(value="/")
+	@RequestMapping(value="/lk")
 	public String home(){
+		System.out.println("------------>hello world: "+this.getClass().getName());
 		return "hello world.";
 	}
 
