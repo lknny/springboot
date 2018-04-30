@@ -24,7 +24,7 @@ public class Controller {
 	@RequestMapping(value="/lk/aop")
 	@AOPTest(hello = "lknny")
 	public String home2() {
-		System.out.println("----------->hello world ,AOP");
+		System.out.println("-----3------>hello world ,AOP");
 		return "hello world ,AOP";
 	}
 
