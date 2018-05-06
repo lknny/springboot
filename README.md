@@ -10,3 +10,9 @@ springboot ,just for fun.包含AOP、动态代理示例代码
 
 ### CGLib
 包路径：springboot.cglib
+
+### GC
+包路径：springboot.gc
+
+### HashMap
+包路径：springboot.hashmap
