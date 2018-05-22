@@ -33,8 +33,8 @@ public class AwkOper implements Operator {
 							int intParm = Integer.parseInt(parm.replace("$", ""));
 							for (String value : values) {
 								String[] content = value.split(" ");
-								if (content.length > 2) {
-									result.add(content[2]);
+								if (content.length >= intParm) {
+									result.add(content[intParm-1]);
 								}
 							}
 						} catch (Exception e) {

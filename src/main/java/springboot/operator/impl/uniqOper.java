@@ -14,11 +14,9 @@ public class uniqOper implements Operator {
 	@Override
 	public List<String> oper(String[] parms, List<String> values) {
 		List<String> result = new ArrayList<String>();
-
 		if (parms.length != 0) {
 			String para = parms[0].trim();
 			if ("-c".equals(para)) {
-
 				Map<String, Integer> index = new HashMap<String, Integer>();
 				for (String value : values) {
 					if (null == index.get(value)) {

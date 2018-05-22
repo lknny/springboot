@@ -7,6 +7,10 @@ import java.util.List;
  */
 public interface Operator {
 
+	/**
+	 * @param parms 操作符入参
+	 * @param values 操作数据
+	 * @return 返回数据
+	 */
 	public List<String> oper(String[] parms,List<String> values);
-
 }

@@ -1,15 +1,27 @@
 package springboot.operator;
 
+import springboot.operator.impl.*;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 /**
  * Created by ${ lknny@163.com } on 2018/5/21.
+ *
+ * 实现shell命令：cat /usr/ss/123.txt | grep "error" |awk '{print $3}' | sort |uniq -c
+ *
  */
 public class App {
 
 	public static Map<String, Operator> OperFactory = new HashMap<String, Operator>();
+	static {
+		OperFactory.put("cat", new CatOper());
+		OperFactory.put("grep", new GrepOper());
+		OperFactory.put("awk", new AwkOper());
+		OperFactory.put("sort", new SortOper());
+		OperFactory.put("uniq", new uniqOper());
+	}
 
 	public static List<String> result = null;
 
