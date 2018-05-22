@@ -1,8 +1,6 @@
 package springboot.controller;
 
 
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import springboot.aop.AOPTest;
@@ -11,8 +9,8 @@ import springboot.aop.AOPTest;
  * Created by ${lknny@163.com} on 2017/11/13.
  */
 @RestController
-@ComponentScan(basePackages={"springboot"})
-@EnableAutoConfiguration
+//@ComponentScan(basePackages={"springboot"})
+//@EnableAutoConfiguration
 public class Controller {
 
 	@RequestMapping(value="/lk")
