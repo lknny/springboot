@@ -1,4 +1,4 @@
-package springboot.nio;
+package springboot.nio.channel;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;

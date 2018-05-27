@@ -1,4 +1,4 @@
-package springboot.nio;
+package springboot.nio.channel;
 
 import java.io.File;
 import java.io.FileInputStream;
