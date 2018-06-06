@@ -9,7 +9,7 @@ import java.nio.channels.SocketChannel;
  */
 public class SocketChannelTest {
 
-	private static final int port = 8001;
+	private static final int port = 8002;
 	public static void main(String[] args) {
 		for (int i=0;i<10;i++) {
 			new SocketChannelImpl(port,i).start();
@@ -33,7 +33,7 @@ public class SocketChannelTest {
 
 				for (;!socketChannel.finishConnect();) {
 					System.out.println("connectting....");
-					Thread.sleep(50);
+					Thread.sleep(10);
 				}
 				ByteBuffer byteBuffer = ByteBuffer.allocate(1024);
 				String content = "hello, i am client--------->" + count;
