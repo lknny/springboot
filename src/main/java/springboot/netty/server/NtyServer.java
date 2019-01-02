@@ -63,12 +63,13 @@ public class NtyServer {
 
 			System.out.println("Time Server receive: " + msgContent);
 
+			msgContent = msgContent.replaceAll("\r", "").replaceAll("\n","");
 			if ("query time".equalsIgnoreCase(msgContent)) {
-				String time = LocalDateTime.now().toString();
+				String time = LocalDateTime.now().toString()+"\r\n";
 				ByteBuf buf = Unpooled.copiedBuffer(time.getBytes());
 				ctx.writeAndFlush(buf);
 			} else {
-				String errMsg = "error command!";
+				String errMsg = "error command: "+msgContent+"\r\n";;
 				ByteBuf buf = Unpooled.copiedBuffer(errMsg.getBytes());
 				ctx.writeAndFlush(buf);
 			}
