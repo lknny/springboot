@@ -20,7 +20,7 @@ public class SentinelTest {
 			Entry entry = null;
 			try {
 				entry = SphU.entry("lk");
-				System.out.println("hello, lk.");
+				System.out.println("hello, lk");
 			} catch (Exception e) {
 				Thread.sleep(1000);
 				System.out.println("block........!");
